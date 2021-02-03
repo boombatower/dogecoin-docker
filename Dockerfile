@@ -6,6 +6,6 @@ RUN zypper -n ar --no-check -p 105 \
   zypper -n --gpg-auto-import-keys in -y dogecoind dogecoin-utils && \
   mkdir /srv/dogecoin
 
-WORKDIR /srv/dogecoin
+VOLUME /root/.dogecoin
 
 ENTRYPOINT /usr/bin/dogecoind
